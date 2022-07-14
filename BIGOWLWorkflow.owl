@@ -1,0 +1,592 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/BIGOWLWorkflow/"
+     xml:base="https://w3id.org/BIGOWLWorkflow/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:obda="https://w3id.org/obda/vocabulary#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="https://w3id.org/BIGOWLWorkflow">
+        <owl:imports rdf:resource="https://w3id.org/BIGOWLAlgorithms"/>
+        <owl:imports rdf:resource="https://w3id.org/BIGOWLData"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/connectedTo -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/BIGOWLWorkflow/connectedTo">
+        <rdfs:domain rdf:resource="https://w3id.org/BIGOWLWorkflow/Task"/>
+        <rdfs:range rdf:resource="https://w3id.org/BIGOWLWorkflow/Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/correspondsToTemplate -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/BIGOWLWorkflow/correspondsToTemplate">
+        <rdfs:domain rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow"/>
+        <rdfs:range rdf:resource="http://www.opmw.org/ontology/WorkflowTemplate"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/hasAlgorithm -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/BIGOWLWorkflow/hasAlgorithm">
+        <rdfs:domain rdf:resource="https://w3id.org/BIGOWLWorkflow/Component"/>
+        <rdfs:range rdf:resource="https://w3id.org/BIGOWLAlgorithms/Algorithm"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/hasChannelOutput -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/BIGOWLWorkflow/hasChannelOutput">
+        <rdfs:domain rdf:resource="https://w3id.org/BIGOWLWorkflow/Task"/>
+        <rdfs:range rdf:resource="https://w3id.org/BIGOWLWorkflow/Channel"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/hasComponent -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/BIGOWLWorkflow/hasComponent">
+        <rdfs:domain rdf:resource="https://w3id.org/BIGOWLWorkflow/Task"/>
+        <rdfs:range rdf:resource="https://w3id.org/BIGOWLWorkflow/Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/hasDataType -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/BIGOWLWorkflow/hasDataType">
+        <rdfs:domain rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <rdfs:range rdf:resource="https://w3id.org/BIGOWLData/DataType"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/hasImplementation -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/BIGOWLWorkflow/hasImplementation">
+        <rdfs:domain rdf:resource="https://w3id.org/BIGOWLWorkflow/Component"/>
+        <rdfs:range rdf:resource="https://w3id.org/BIGOWLWorkflow/Implementation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/hasParameter -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/BIGOWLWorkflow/hasParameter">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/BIGOWLWorkflow/Component"/>
+                    <rdf:Description rdf:about="https://w3id.org/BIGOWLWorkflow/Task"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/hasTask -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/BIGOWLWorkflow/hasTask">
+        <rdfs:domain rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow"/>
+        <rdfs:range rdf:resource="https://w3id.org/BIGOWLWorkflow/Task"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/instanceParameterOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/BIGOWLWorkflow/instanceParameterOf">
+        <rdfs:domain rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <rdfs:range rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/isAVersionOf -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/BIGOWLWorkflow/isAVersionOf">
+        <rdfs:domain rdf:resource="https://w3id.org/BIGOWLWorkflow/Component"/>
+        <rdfs:range rdf:resource="https://w3id.org/BIGOWLWorkflow/Component"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/specifiesInputClass -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/BIGOWLWorkflow/specifiesInputClass">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/BIGOWLWorkflow/Component"/>
+                    <rdf:Description rdf:about="https://w3id.org/BIGOWLWorkflow/Task"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/BIGOWLData/Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/specifiesOutputClass -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/BIGOWLWorkflow/specifiesOutputClass">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/BIGOWLWorkflow/Component"/>
+                    <rdf:Description rdf:about="https://w3id.org/BIGOWLWorkflow/Task"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="https://w3id.org/BIGOWLData/Data"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/wasLaunchedBy -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/BIGOWLWorkflow/wasLaunchedBy">
+        <rdfs:domain rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow"/>
+        <rdfs:range rdf:resource="http://purl.org/net/opmv/ns#Agent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/className -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/BIGOWLWorkflow/className">
+        <rdfs:domain rdf:resource="https://w3id.org/BIGOWLWorkflow/Implementation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/classNameSerialized -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/BIGOWLWorkflow/classNameSerialized">
+        <rdfs:domain rdf:resource="https://w3id.org/BIGOWLWorkflow/Channel"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/endedAt -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/BIGOWLWorkflow/endedAt">
+        <rdfs:domain rdf:resource="https://w3id.org/BIGOWLWorkflow/Task"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The time at which an activity ended. See also prov:startedAtTime.
+http://www.w3.org/ns/prov#endedAtTime</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/hasDataValue -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/BIGOWLWorkflow/hasDataValue">
+        <rdfs:domain rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/hasDefaultValue -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/BIGOWLWorkflow/hasDefaultValue">
+        <rdfs:domain rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/hasDocumentation -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/BIGOWLWorkflow/hasDocumentation">
+        <rdfs:domain rdf:resource="http://www.opmw.org/ontology/WorkflowTemplate"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#anyURI"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Property that binds a workflow template to its documentation.
+
+http://www.opmw.org/ontology/hasDocumentation</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/hasListValue -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/BIGOWLWorkflow/hasListValue">
+        <rdfs:domain rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/hasName -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/BIGOWLWorkflow/hasName">
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/implementationLanguage -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/BIGOWLWorkflow/implementationLanguage">
+        <rdfs:domain rdf:resource="https://w3id.org/BIGOWLWorkflow/Implementation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/isCorrectWorkflow -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/BIGOWLWorkflow/isCorrectWorkflow">
+        <rdfs:domain rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/isObligatory -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/BIGOWLWorkflow/isObligatory">
+        <rdfs:domain rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/module -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/BIGOWLWorkflow/module">
+        <rdfs:domain rdf:resource="https://w3id.org/BIGOWLWorkflow/Implementation"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/numTask -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/BIGOWLWorkflow/numTask">
+        <rdfs:domain rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/numberOfInputs -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/BIGOWLWorkflow/numberOfInputs">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/BIGOWLWorkflow/Component"/>
+                    <rdf:Description rdf:about="https://w3id.org/BIGOWLWorkflow/Task"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/numberOfOutputs -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/BIGOWLWorkflow/numberOfOutputs">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/BIGOWLWorkflow/Component"/>
+                    <rdf:Description rdf:about="https://w3id.org/BIGOWLWorkflow/Task"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/order -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/BIGOWLWorkflow/order">
+        <rdfs:domain rdf:resource="https://w3id.org/BIGOWLWorkflow/Task"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/private -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/BIGOWLWorkflow/private">
+        <rdfs:domain rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/range -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/BIGOWLWorkflow/range">
+        <rdfs:domain rdf:resource="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/startedAt -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/BIGOWLWorkflow/startedAt">
+        <rdfs:domain rdf:resource="https://w3id.org/BIGOWLWorkflow/Task"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#dateTime"/>
+                    <rdf:Description rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+                </owl:unionOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The time at which an activity started. See also prov:endedAtTime.
+
+http://www.w3.org/ns/prov#startedAtTime</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/version -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/BIGOWLWorkflow/version">
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="https://w3id.org/BIGOWLWorkflow/Component"/>
+                    <rdf:Description rdf:about="https://w3id.org/BIGOWLWorkflow/Implementation"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/workflow -->
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/BIGOWLWorkflow/workflow">
+        <rdfs:domain rdf:resource="https://w3id.org/BIGOWLWorkflow/Component"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/net/opmv/ns#Agent -->
+
+    <owl:Class rdf:about="http://purl.org/net/opmv/ns#Agent"/>
+    
+
+
+    <!-- http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter -->
+
+    <owl:Class rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Parameter"/>
+    
+
+
+    <!-- http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow -->
+
+    <owl:Class rdf:about="http://www.e-lico.eu/ontologies/dmo/DMOP/DMOP.owl#Workflow"/>
+    
+
+
+    <!-- http://www.opmw.org/ontology/WorkflowTemplate -->
+
+    <owl:Class rdf:about="http://www.opmw.org/ontology/WorkflowTemplate"/>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/Channel -->
+
+    <owl:Class rdf:about="https://w3id.org/BIGOWLWorkflow/Channel">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Represents a topic when a workflow is executed, this class is used for annotating the process of execution</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/Component -->
+
+    <owl:Class rdf:about="https://w3id.org/BIGOWLWorkflow/Component"/>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/DataAnalysing -->
+
+    <owl:Class rdf:about="https://w3id.org/BIGOWLWorkflow/DataAnalysing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/BIGOWLWorkflow/Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/DataCollection -->
+
+    <owl:Class rdf:about="https://w3id.org/BIGOWLWorkflow/DataCollection">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/BIGOWLWorkflow/Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/DataFlow -->
+
+    <owl:Class rdf:about="https://w3id.org/BIGOWLWorkflow/DataFlow">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/BIGOWLWorkflow/Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/DataIngestion -->
+
+    <owl:Class rdf:about="https://w3id.org/BIGOWLWorkflow/DataIngestion">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/BIGOWLWorkflow/DataCollection"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/DataMining -->
+
+    <owl:Class rdf:about="https://w3id.org/BIGOWLWorkflow/DataMining">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/BIGOWLWorkflow/MachineLearning"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/DataProcessing -->
+
+    <owl:Class rdf:about="https://w3id.org/BIGOWLWorkflow/DataProcessing">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/BIGOWLWorkflow/Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/DataSink -->
+
+    <owl:Class rdf:about="https://w3id.org/BIGOWLWorkflow/DataSink">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/BIGOWLWorkflow/Component"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/DataTransform -->
+
+    <owl:Class rdf:about="https://w3id.org/BIGOWLWorkflow/DataTransform">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/BIGOWLWorkflow/DataProcessing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/Implementation -->
+
+    <owl:Class rdf:about="https://w3id.org/BIGOWLWorkflow/Implementation"/>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/MachineLearning -->
+
+    <owl:Class rdf:about="https://w3id.org/BIGOWLWorkflow/MachineLearning">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/BIGOWLWorkflow/DataAnalysing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/RemoveOutlier -->
+
+    <owl:Class rdf:about="https://w3id.org/BIGOWLWorkflow/RemoveOutlier">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/BIGOWLWorkflow/DataProcessing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/Split -->
+
+    <owl:Class rdf:about="https://w3id.org/BIGOWLWorkflow/Split">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/BIGOWLWorkflow/DataProcessing"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/SplitShuffle -->
+
+    <owl:Class rdf:about="https://w3id.org/BIGOWLWorkflow/SplitShuffle">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/BIGOWLWorkflow/Split"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/Task -->
+
+    <owl:Class rdf:about="https://w3id.org/BIGOWLWorkflow/Task"/>
+    
+
+
+    <!-- https://w3id.org/BIGOWLWorkflow/WebService -->
+
+    <owl:Class rdf:about="https://w3id.org/BIGOWLWorkflow/WebService">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/BIGOWLWorkflow/DataProcessing"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
