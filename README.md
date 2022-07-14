@@ -1,2 +1,2 @@
 # BIGOWL
-BIGOWL ontologies family is composed of BIGOWLWorkflow, BIGOWLProblems, BIGOWLData and BIGOWLAlgorithms
+BIGOWL ontologies family is composed of BIGOWLWorkflows, BIGOWLProblems, BIGOWLData and BIGOWLAlgorithms
