@@ -6,8 +6,24 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:obda="https://w3id.org/obda/vocabulary#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/BIGOWLData"/>
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	 xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="https://schema.org/">
+    <owl:Ontology rdf:about="https://w3id.org/BIGOWLData">
+		<owl:versionIRI rdf:resource="https://w3id.org/BIGOWLData"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-07-14T09:00:00</terms:created>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aether Group</terms:creator>
+        <terms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> This ontology contains all the classes and properties related to data. Data is devoted to annotating all the data flowing throughout the analytic workflow. It is declared as EquivalentTo IO-Class of DMOP. This aligning enables datatypes defined by third parties’ ontologies to be contextualised in the analysis. BIGOWLData contains the main data properties defined for this class, namely: path, to annotate the origin of data; and hasDataType, which establishes the relationship with class DataType. This last is used to define the data type, i.e. PrimitiveType (Double, Integer, Boolean, etc.) or StructuredType (Graph, Tree, Matrix, Vector, Tuple, etc.).</terms:description>
+        <terms:license rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://opensource.org/licenses/MIT</terms:license>
+        <terms:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aether Group</terms:publisher>
+        <terms:rights rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">(c) Aether Group</terms:rights>
+        <terms:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aether</terms:rights>
+        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BIGOWLData</terms:title>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BIGOWLData</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/BIGOWLData</vann:preferredNamespaceUri>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BIGOWLData Ontology</rdfs:label>
+	</owl:Ontology>
     
 
 

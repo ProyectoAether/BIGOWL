@@ -6,8 +6,24 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:obda="https://w3id.org/obda/vocabulary#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://w3id.org/BIGOWLProblems"/>
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	 xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:schema="https://schema.org/">
+    <owl:Ontology rdf:about="https://w3id.org/BIGOWLProblems">
+		<owl:versionIRI rdf:resource="https://w3id.org/BIGOWLProblems"/>
+        <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-07-14T09:00:00</terms:created>
+        <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aether Group</terms:creator>
+        <terms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> This ontology is used to represent the problem class and its properties. Problem is oriented to the specific problem domain (Smart Cities, Biology, etc.).</terms:description>
+        <terms:license rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">https://opensource.org/licenses/MIT</terms:license>
+        <terms:publisher rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aether Group</terms:publisher>
+        <terms:rights rdf:datatype="http://www.w3.org/2000/01/rdf-schema#Literal">(c) Aether Group</terms:rights>
+        <terms:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aether</terms:rights>
+        <terms:title rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BIGOWLProblems</terms:title>
+        <vann:preferredNamespacePrefix rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BIGOWLProblems</vann:preferredNamespacePrefix>
+        <vann:preferredNamespaceUri rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://w3id.org/BIGOWLProblems</vann:preferredNamespaceUri>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BIGOWLProblems Ontology</rdfs:label>
+    </owl:Ontology>
     
 
 
