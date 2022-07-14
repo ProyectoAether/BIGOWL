@@ -8,7 +8,7 @@
      xmlns:obda="https://w3id.org/obda/vocabulary#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="https://w3id.org/BIGOWL">
-        <owl:imports rdf:resource="https://w3id.org/BIGOWLWorkflow"/>
+        <owl:imports rdf:resource="https://w3id.org/BIGOWLWorkflows"/>
     </owl:Ontology>
 </rdf:RDF>
 
