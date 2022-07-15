@@ -6,13 +6,14 @@
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:obda="https://w3id.org/obda/vocabulary#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
-	 xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:schema="https://schema.org/">
     <owl:Ontology rdf:about="https://w3id.org/BIGOWLAlgorithms">
+        <owl:versionIRI rdf:resource="https://w3id.org/BIGOWLAlgorithms"/>
+        <owl:imports rdf:resource="https://w3id.org/BIGOWLData"/>
         <owl:imports rdf:resource="https://w3id.org/BIGOWLProblems"/>
-		<owl:versionIRI rdf:resource="https://w3id.org/BIGOWLAlgorithms"/>
         <terms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2022-07-14T09:00:00</terms:created>
         <terms:creator rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Aether Group</terms:creator>
         <terms:description rdf:datatype="http://www.w3.org/2001/XMLSchema#string"> This ontology covers all possible kinds. It has two main subclasses: DataMiningAlgorithm and OptimizationAlgorithm, which are used to distinguish between these two families of algorithms. The former is included in the form of equivalence with the class DM-Algorithm, which is linked from DMOP.</terms:description>
